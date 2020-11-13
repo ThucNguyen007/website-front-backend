@@ -1,12 +1,16 @@
 import React from 'react';
+
 import axios from 'axios';
+
 import StripeCheckout from 'react-stripe-checkout';
 
 const StripeCheckoutButton = ({ price }) => {
+
     const priceForStripe = price * 100;
     const publishableKey = 'pk_test_xXLCTshes83fkjzlDWSez8D200ct4XR17R';
     
     const onToken = token => {
+
         axios({
             url: 'payment',
             method: 'post',
@@ -24,6 +28,7 @@ const StripeCheckoutButton = ({ price }) => {
               'There was an issue with your payment! Please make sure you use the provided credit card.'
             );
         });
+        
     };
     
     return (
@@ -40,6 +45,7 @@ const StripeCheckoutButton = ({ price }) => {
         stripeKey={publishableKey}
     />
     );
+
 };
 
 export default StripeCheckoutButton;
