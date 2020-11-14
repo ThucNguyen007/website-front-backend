@@ -13,9 +13,11 @@ import {
 } from './collection-item.styles';
 
 const CollectionItem = ({ item, addItem }) => {
+
   const { name, price, imageUrl } = item;
 
   return (
+
     <CollectionItemContainer>
       <BackgroundImage className='image' imageUrl={imageUrl} />
       <CollectionFooterContainer>
@@ -26,11 +28,15 @@ const CollectionItem = ({ item, addItem }) => {
         Add to cart
       </AddButton>
     </CollectionItemContainer>
+    
   );
+
 };
 
 const mapDispatchToProps = dispatch => ({
+
   addItem: item => dispatch(addItem(item))
+
 });
 
 export default connect(

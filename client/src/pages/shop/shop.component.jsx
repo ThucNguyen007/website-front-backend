@@ -11,10 +11,13 @@ import CollectionsOverviewContainer from '../../components/collections-overview/
 const ShoppingPage = ({ fetchCollectionsStart, match }) => {
 
     useEffect(() => {
+
         fetchCollectionsStart();
+
     }, [fetchCollectionsStart]);
 
   return (
+    
     <div className='shop-page'>
         <Route
             exact

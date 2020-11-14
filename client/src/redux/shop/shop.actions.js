@@ -47,5 +47,19 @@ export const fetchCollectionsStartAsync = () => {
     };
 };
 
+/*
+    componentDidMount() {
+        const { 1 } = this.props;
+        const 2 = firestore.collection('collections');
+
+        fetch(
+            'https://firestore.googleapis.com/...'
+        )
+        .then(response => response.json())
+        .then(collections => console.log(collections));
+    }
+    collectionRef.get
+*/
+
 
 

@@ -30,12 +30,12 @@ const App = ({ checkUserSession, currentUser }) => {
       <Header />
       <Switch>
         <Route exact path='/' component={MainPage} />
-        <Route path='/shop' component={ShoppingPage} />
-        <Route exact path='/checkout' component={CheckoutPage} />
+        <Route path='/shopping' component={ShoppingPage} />
+        <Route exact path='/check-out' component={CheckoutPage} />
         <Route
           exact
           path='/sign-in'
-          render={() =>
+          render = { () =>
             currentUser ? <Redirect to='/' /> : <SignningPage />
           }
         />
@@ -47,11 +47,15 @@ const App = ({ checkUserSession, currentUser }) => {
 }
 
 const mapStateToProps = createStructuredSelector({
+
   currentUser: selectCurrentUser
+
 });
 
 const mapDispatchToProps = dispatch => ({
+  
   checkUserSession: () => dispatch(checkUserSession())
+  
 });
 
 export default connect(

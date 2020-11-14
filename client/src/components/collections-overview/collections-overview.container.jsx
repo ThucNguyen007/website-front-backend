@@ -9,9 +9,12 @@ import Spinning from '../with-spinner/with-spinner.component';
 import CollectionsOverview from './collections-overview.component';
 
 const mapStateToProps = createStructuredSelector({
+
   isLoading: selectIsCollectionFetching
+
 });
 
+// evaluate from right to left 
 const CollectionsOverviewContainer = compose(
   connect(mapStateToProps),
   Spinning
